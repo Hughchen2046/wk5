@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
+    <title>index</title>
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <main class="bg-gray">
+      <div class="container">
+        <div class="row">
+          <div class="col-10 mx-auto  py-6">
+            <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+              <li class="nav-item me-4" role="presentation">
+                <button class="nav-link active align-bottom" id="pills-info-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-info" type="button" role="tab" aria-controls="pills-info" aria-selected="true">
+                  <span class="material-symbols-outlined align-bottom me-1">
+                    face
+                  </span>個人資料</button>
+              </li>
+              <li class="nav-item me-4" role="presentation">
+                <button class="nav-link align-bottom" id="pills-record-tab" data-bs-toggle="pill"
+                  data-bs-target="#pills-record" type="button" role="tab" aria-controls="pills-record"
+                  aria-selected="false">
+                  <span class="material-symbols-outlined align-bottom me-1">pending_actions
+                  </span>預約紀錄</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link align-bottom" id="pills-plan-tab" data-bs-toggle="pill" data-bs-target="#pills-plan"
+                  type="button" role="tab" aria-controls="pills-plan" aria-selected="false">
+                  <span class="material-symbols-outlined align-bottom me-1">list_alt</span>職旅計劃</button>
+              </li>
+            </ul>
+            <div class="tab-content rounded-border-panel p-5 shadow" id="pills-tabContent">
+<!-- 分頁一  個人資料-->
+              <div class="tab-pane fade show active" id="pills-info" role="tabpanel" aria-labelledby="pills-info-tab"
+                tabindex="0">
+                <div class="d-flex gap-3 mb-5">
+                  <h2 class="fs-4 mb-4" style="min-width: 300px;">個人資料</h2>
+                  <div class="user-info w-100">
+                    <div class="d-flex align-items-end gap-3 mb-4">
+                      <img src="/assets/images/avatar.png" alt="user-image" class="rounded-circle">
+                      <button class="btn btn-outline-dark border align-bottom">
+                        <span class="material-symbols-outlined me-1 align-bottom">upload</span>
+                        更新頭貼</button>
+                    </div>
+                    <form class="form-floating mb-4">
+                      <input type="text" class="form-control" id="floatingInputUsername" placeholder="Username"
+                        value="Mokumaru">
+                      <label for="floatingInputUsername">姓名</label>
+                    </form>
+                    <p class="mb-2">性別</p>
+                    <div class="form-check form-check-inline mb-4">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio-female"
+                        value="female">
+                      <label class="form-check-label" for="inlineRadio-female">女性</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio-male"
+                        value="male">
+                      <label class="form-check-label" for="inlineRadio-male">男性</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio-unknow"
+                        value="unknow">
+                      <label class="form-check-label" for="inlineRadio-unknow">不願透露</label>
+                    </div>
+                    <form class="form-floating mb-4">
+                      <input type="date" class="form-control" id="floatingInputBirth" placeholder="Birth"
+                        value="2000-01-10">
+                      <label for="floatingInputBirth">生日</label>
+                    </form>
+                    <p class="mb-2">密碼</p>
+                    <button class="btn btn-outline-dark border align-bottom mb-4 right-icon-btn">修改密碼
+                      <span class="material-symbols-outlined ms-1 align-bottom">chevron_right</span>
+                    </button>
+                    <form class="form-floating mb-4">
+                      <input type="email" class="form-control" id="floatingInputEmail" placeholder="Email"
+                        value="mokumaru@mail.com">
+                      <label for="floatingInputEmail">信箱</label>
+                      <p class="px-2 text-secondary">盡量勿使用Yahoo或Hotmail郵件信箱，以免因擋信、漏信</p>
+                    </form>
+                    <form class="form-floating mb-4">
+                      <input type="tel" class="form-control" id="floatingInputPhone" placeholder="Phone"
+                        value="09-1234-5678">
+                      <label for="floatingInputPhone">聯絡電話</label>
+                    </form>
+                    <form class="form-floating">
+                      <input type="text" class="form-control" id="floatingInputAddress" placeholder="Address"
+                        value="高雄市三民區九如一路 87 號">
+                      <label for="floatingInputAddress">通訊地址</label>
+                    </form>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center gap-4">
+                    <button class="btn btn-outline-dark border align-bottom right-icon-btn">重新填寫
+                      <span class="material-symbols-outlined ms-1 align-bottom">chevron_right</span>
+                    </button>
+                    <button class="btn btn-outline-dark border align-bottom right-icon-btn active">儲存更新
+                      <span class="material-symbols-outlined ms-1 align-bottom">chevron_right</span>
+                    </button>                    
+                </div>
+              </div>
+<!-- 分頁二  預約紀錄-->
+              <div class="tab-pane fade" id="pills-record" role="tabpanel" aria-labelledby="pills-record-tab" tabindex="0">
+                <h2 class="fs-4 mb-4">預約紀錄</h2>
+                <div class="d-flex justify-content-between gap-4 mb-5">
+                  <div class="card rounded-border-panel w-100">
+                    <div class="card-body text-center py-4">
+                      <h3 class="card-title fs-2 fw-bold mb-2">3</h5>
+                        <p class="card-text substitle">已完成諮詢</p>
+                    </div>
+                  </div>
+                  <div class="card rounded-border-panel w-100">
+                    <div class="card-body text-center py-4">
+                      <h3 class="card-title fs-2 fw-bold mb-2">2025/10/10</h5>
+                        <p class="card-text substitle">即將到來</p>
+                    </div>
+                  </div>
+                  <div class="card rounded-border-panel w-100">
+                    <div class="card-body text-center py-4">
+                      <h3 class="card-title fs-2 fw-bold mb-2">3/6</h5>
+                        <p class="card-text substitle">使用方案進度</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-between mb-4">
+                  <div class="d-flex">
+                    <button type="button" class="btn btn-dark btn-border-radius-lg me-2">全部預約</button>
+                    <button type="button" class="btn btn-outline-dark btn-border-radius-lg border me-2">已完成</button>
+                    <button type="button" class="btn btn-outline-dark btn-border-radius-lg border">已取消</button>
+                  </div>
+                  <div class="dropdown">
+                    <button class="btn border align-bottom me-1" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      排序
+                    <span class="material-symbols-outlined align-bottom">
+filter_list
+</span></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                      <li><a class="dropdown-item" href="#">新到舊</a></li>
+                      <li><a class="dropdown-item" href="#">舊到新</a></li>
+                    </ul>
+                  </div>
+                </div>
+                <table class="table table-hover table-striped">
+                  <thead class="border-bottom">
+                    <tr>
+                      <th scope="col">諮詢方案</th>
+                      <th scope="col">預約日期</th>
+                      <th scope="col">諮詢時長</th>
+                      <th scope="col">諮詢方式</th>
+                      <th scope="col">上課狀態</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">職涯定位-職涯探索包 | 6/6堂</th>
+                      <td>2025/11/11</td>
+                      <td>60分鐘</td>
+                      <td><span class="badge rounded-pill text-secondary border">視訊</span></td>
+                      <td>等待上課</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">職涯定位-職涯探索包 | 5/6堂</th>
+                      <td>2025/10/10</td>
+                      <td>60分鐘</td>
+                      <td><span class="badge rounded-pill text-secondary border">視訊</span></td>
+                      <td>等待上課</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary">職涯定位-職涯探索包 | 4/6堂</th>
+                      <td class="text-secondary">2025/09/09</td>
+                      <td class="text-secondary">60分鐘</td>
+                      <td class="text-secondary"><span class="badge rounded-pill text-secondary border">視訊</span></td>
+                      <td class="text-secondary">已完成</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary">職涯定位-職涯探索包 | 3/6堂</th>
+                      <td  class="text-secondary">2025/08/08</td>
+                      <td  class="text-secondary">60分鐘</td>
+                      <td  class="text-secondary"><span class="badge rounded-pill text-secondary border">面對面</span></td>
+                      <td  class="text-secondary">已完成</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary">職涯定位-職涯探索包 | 2/6堂</th>
+                      <td  class="text-secondary">2025/07/07</td>
+                      <td  class="text-secondary">60分鐘</td>
+                      <td  class="text-secondary"><span class="badge rounded-pill text-secondary border">面對面</span></td>
+                      <td  class="text-secondary">已完成</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="text-secondary">職涯定位-職涯探索包 | 1/6堂</th>
+                      <td  class="text-secondary">2025/06/06</td>
+                      <td  class="text-secondary">90分鐘</td>
+                      <td  class="text-secondary"><span class="badge rounded-pill text-secondary border">面對面</span></td>
+                      <td  class="text-secondary">已完成</td>
+                    </tr>                                                                                
+                  </tbody>
+                </table>
+                </div>
+<!-- 分頁三  職旅計劃-->
+              <div class="tab-pane fade" id="pills-plan" role="tabpanel" aria-labelledby="pills-plan-tab" tabindex="0">
+                <div class="d-flex gap-3">
+                  <div class="left-context">
+                    <h2 class="fs-4 mb-3" style="min-width: 300px;">職旅計劃概況</h2>
+                    <div class="d-flex">
+                      <p>欄位皆為</p>
+                      <span class="badge text-bg-danger rounded-pill ms-1 align-content-center">必填</span>
+                    </div>
+                  </div>
+                  <div class="right-context">
+                    <p class="mb-2">目前職業狀態</p>
+                    <div class="form-check form-check-inline mb-2">
+                      <input class="form-check-input" type="radio" name="WorkStatus" id="FullTime"
+                        value="female">
+                      <label class="form-check-label" for="FullTime">全職上班族</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-2">
+                      <input class="form-check-input" type="radio" name="WorkStatus" id="PartTime"
+                        value="male">
+                      <label class="form-check-label" for="PartTime">兼職工作者</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-2">
+                      <input class="form-check-input" type="radio" name="WorkStatus" id="Freelance"
+                        value="male">
+                      <label class="form-check-label" for="Freelance">自由工作者/接案者</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-2">
+                      <input class="form-check-input" type="radio" name="WorkStatus" id="DigitalNomad"
+                        value="male">
+                      <label class="form-check-label" for="DigitalNomad">數位遊牧者</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-2">
+                      <input class="form-check-input" type="radio" name="WorkStatus" id="Entrepreneur"
+                        value="male">
+                      <label class="form-check-label" for="Entrepreneur">創業者/企業主</label>
+                    </div>
+                    <div class="form-check form-check-inline mb-2">
+                      <input class="form-check-input" type="radio" name="WorkStatus" id="BetweenJobs"
+                        value="male">
+                      <label class="form-check-label" for="BetweenJobs">待業中</label>
+                    </div>       
+                    <div class="form-check form-check-inline mb-4">
+                      <input class="form-check-input" type="radio" name="WorkStatus" id="Others"
+                        value="male">
+                      <label class="form-check-label" for="Others">其他</label>
+                    </div>                                 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <%- include('./layout/footer'); -%>
+
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

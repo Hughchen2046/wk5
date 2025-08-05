@@ -415,6 +415,7 @@ $spacers: (
   3: $spacer,
   4: $spacer * 1.5,
   5: $spacer * 3,
+  6: $spacer * 5,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -757,7 +758,8 @@ $table-border-factor:         .2 !default;
 $table-border-width:          var(--#{$prefix}border-width) !default;
 $table-border-color:          var(--#{$prefix}border-color) !default;
 
-$table-striped-order:         odd !default;
+// $table-striped-order:         odd !default;
+$table-striped-order:         even;
 $table-striped-columns-order: even !default;
 
 $table-group-separator-color: currentcolor !default;
@@ -802,8 +804,10 @@ $input-btn-padding-y-sm:      .25rem !default;
 $input-btn-padding-x-sm:      .5rem !default;
 $input-btn-font-size-sm:      $font-size-sm !default;
 
-$input-btn-padding-y-lg:      .5rem !default;
-$input-btn-padding-x-lg:      1rem !default;
+// $input-btn-padding-y-lg:      .5rem !default;
+$input-btn-padding-y-lg:      .75rem;
+// $input-btn-padding-x-lg:      1rem !default;
+$input-btn-padding-x-lg:      1.5rem;
 $input-btn-font-size-lg:      $font-size-lg !default;
 
 $input-btn-border-width:      var(--#{$prefix}border-width) !default;
@@ -846,9 +850,11 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%)) !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           var(--#{$prefix}border-radius) !default;
-$btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
-$btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
+// $btn-border-radius:           var(--#{$prefix}border-radius) !default;
+$btn-border-radius:           var(--#{$prefix}border-radius-xl);
+// $btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
+$btn-border-radius-sm:        var(--#{$prefix}border-radius-xl);
+$btn-border-radius-lg:        var(--#{$prefix}border-radius-xl) !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 

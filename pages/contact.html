@@ -9,6 +9,40 @@
   <body>
     <%- include('./layout/header'); -%>
     <h1>我是contact</h1>
+    <div class="card p-3">
+  <div class="text-center fw-bold">八月 2025</div>
+  <div class="calendar-grid my-2">
+    <!-- 星期列 -->
+    <div class="d-grid grid-template-columns-7 text-muted text-center small mb-1">
+      <div>週日</div><div>週一</div><div>週二</div><div>週三</div><div>週四</div><div>週五</div><div>週六</div>
+    </div>
+    <!-- 日期列 -->
+    <div class="d-grid grid-template-columns-7 text-center">
+      <!-- 動態插入每一天按鈕，今天加 .active, 不可選加.disabled -->
+      <button class="btn btn-light">1</button>
+      ...
+      <button class="btn btn-outline-primary active">22</button>
+    </div>
+  </div>
+  <div class="text-center fw-bold mb-2">選擇時段</div>
+  <div class="d-flex justify-content-around mb-3">
+    <div class="text-center">
+      <div class="text-muted">早上</div>
+      <button class="btn btn-outline-secondary btn-sm">11:30</button>
+    </div>
+    <div class="text-center">
+      <div class="text-muted">下午</div>
+      <button class="btn btn-outline-secondary btn-sm">13:30</button>
+    </div>
+    <div class="text-center">
+      <div class="text-muted">晚上</div>
+      <button class="btn btn-outline-secondary btn-sm">17:30</button>
+    </div>
+  </div>
+  
+  <button class="btn btn-primary w-100">立即預約</button>
+  </div>
+
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
