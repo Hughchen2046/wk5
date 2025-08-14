@@ -49,9 +49,8 @@
                   <div class="user-info w-100">
                     <div class="d-flex align-items-end gap-3 mb-4">
                       <img src="/assets/images/avatar.png" alt="user-image" class="rounded-circle">
-                      <button class="btn btn-outline-dark border align-bottom">
-                        <span class="material-symbols-outlined me-1 align-bottom">upload</span>
-                        更新頭貼</button>
+                      <label for="uploadPhoto" class="btn btn-outline-dark border align-bottom"><span class="material-symbols-outlined me-1 align-bottom">upload</span>更新頭貼</label>
+                      <input class="d-none" type="file" id="uploadPhoto">                        
                     </div>
                     <form class="form-floating mb-4">
                       <input type="text" class="form-control" id="floatingInputUsername" placeholder="Username"
@@ -365,9 +364,8 @@
                     </div>
                     <!-- 附件檔案 -->
                     <p class="mb-2">附件檔案</p>
-                    <button class="btn btn-outline-dark border align-bottom mb-5">
-                      <span class="material-symbols-outlined me-1 align-bottom">upload</span>
-                      上傳檔案</button>
+                    <label for="uploadMultiple" class="btn btn-outline-dark border align-bottom mb-5"><span class="material-symbols-outlined me-1 align-bottom">upload</span>上傳檔案</label>
+                    <input class="d-none" type="file" id="uploadMultiple" multiple>
                   </div>
                 </div>
                 <div class="d-flex gap-3 border-bottom py-5">
